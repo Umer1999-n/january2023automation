@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="smoke">
+    <test name="Yahoo Test with Screenshot">
+        <classes>
+            <class name="Day15_02272023.T1_Yahoo_Screenshot"/>
+            <class name="Day13_02142023.T3_Yahoo_Boolean"/>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
