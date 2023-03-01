@@ -82,7 +82,7 @@ public class ReusableActions_Logger {
     }//end of getText method
 
     //click is a void method which will just perform the action
-    public static void submitMethod(WebDriver driver, String xpath, ExtentTest logger, String elementName){
+    public static void submitAction(WebDriver driver, String xpath, ExtentTest logger, String elementName){
         try{
             WebDriverWait wait = new WebDriverWait(driver,10);
             wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath))).submit();

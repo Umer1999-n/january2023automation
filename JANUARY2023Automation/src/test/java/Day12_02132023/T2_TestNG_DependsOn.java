@@ -37,4 +37,4 @@ public class T2_TestNG_DependsOn {
     public void quitDriverSession() {
         driver.quit();
     }
-}
+}//end of class

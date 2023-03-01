@@ -36,6 +36,14 @@ public class T1_MouseActions_USPS {
         WebElement calcPrice = driver.findElement(By.xpath("//*[@class = 'tool-calc']"));
         //move to the calculate a price element then click on it
         mouseActions.moveToElement(calcPrice).click().perform();
+        //store usps home into webelement
+        WebElement uspsHome = driver.findElement(By.xpath("//*[@alt = 'USPS.com home']"));
+        //right click on usps home logo
+        mouseActions.moveToElement(uspsHome).contextClick().perform();
+        //double click on usps home logo
+        mouseActions.moveToElement(uspsHome).doubleClick().perform();
+        //quit the driver
+        driver.quit();
 
 
     }//emd of main

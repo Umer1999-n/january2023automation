@@ -1,9 +1,24 @@
 package Day14_022123;
 
+import Reusable_Library.ReusableActions;
 import Reusable_Library.ReusableActions_Logger;
+import com.relevantcodes.extentreports.LogStatus;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
-/*public class GoogleSearch_TestNG {
+import static Reusable_Library.TestBase.logger;
+
+public class GoogleSearch_TestNG {
+    //define wedbdriver
+    WebDriver driver;
+
+    @BeforeSuite
+    public void setChromeDriver() {
+        driver = ReusableActions.chromeDriverSetup();
+    }//end of setDriver method
+
     @Test(priority = 1)
     public void SearchForBMW(){
         //navigate to google home page
@@ -11,7 +26,7 @@ import org.testng.annotations.Test;
         //enter the keyword bmw on your search field
         ReusableActions_Logger.sendKeysMethod(driver,"//*[@name='q']","BMW",logger,"Search Field");
         //submit on search button
-        ReusableActions_Logger.submitMethod(driver,"//*[@name='btnK']",logger,"Google Search");
+        ReusableActions_Logger.submitAction(driver,"//*[@name='btnK']",logger,"Google Search");
     }//end of test 1
 
     @Test(priority = 2)
@@ -22,8 +37,9 @@ import org.testng.annotations.Test;
         System.out.println("Search Number is " + arrayMessage[1]);
         logger.log(LogStatus.INFO,"Search Number is " + arrayMessage[1]);
 
-        //quit the driver
-        driver.quit();
-
     }//end of test 2
-}//end of class*/
+    @AfterSuite
+    public void quitDriverSession() {
+        driver.quit();
+    }
+}//end of class
